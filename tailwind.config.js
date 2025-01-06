@@ -8,6 +8,8 @@ export default {
     extend: {
       colors: {
         customGray: 'rgba(40, 40, 40, 1)',      },
+        customFontColor: "rgba(37, 43, 66, 1)",
+        customBgCreamcolor:"rgb(254, 232, 174)"
     },
   },
   plugins: [],

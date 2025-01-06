@@ -47,7 +47,9 @@ const Navbar = () => {
 
         {/* Sign In Button */}
         <button className="bg-yellow-400 text-black px-4 py-2 rounded hover:bg-yellow-500 text-xs sm:text-sm">
+        <Link to="/signin" className="text-black no-underline">
           Sign In
+        </Link>
         </button>
 
         {/* Mobile Menu Button (only visible on mobile) */}

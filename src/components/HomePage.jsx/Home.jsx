@@ -1,3 +1,4 @@
+import AuthPage from "../Signup/SignUp";
 import BestSeller from "./BestSeller";
 import Category from "./Category";
 import FeaturesSection from "./FeaturesSection";
@@ -16,6 +17,7 @@ const HomePage = () => {
       <FeaturesSection/>
       <TopBrands/>
       <WeFindForYou/>
+      
     </div>
   );
 };
