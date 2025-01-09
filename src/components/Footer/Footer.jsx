@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-customGray text-white">
       {/* Top Section */}
       <div className=" text-center py-4" style={{ backgroundColor: 'rgba(255, 198, 51, 1)' }} >
         <h3 className="font-bold text-lg">
@@ -78,9 +78,9 @@ const Footer = () => {
             </Link>
             </li>
             <li>
-              <a href="#" className="text-sm hover:underline">
-                Terms & Conditions
-              </a>
+            <Link to="/termsandconditions" className="text-sm hover:underline">
+                Terms and Conditions
+            </Link>
             </li>
             <li>
             <Link to="/faq" className="text-sm hover:underline">

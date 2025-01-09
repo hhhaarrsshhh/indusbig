@@ -1,9 +1,27 @@
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom"; // Import useLocation for active route tracking
 import logo from "../../assets/logo.png"; // Import logo
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State to control the mobile menu
+  const location = useLocation(); // Get the current location (route)
+
+  const links = [
+    "Home",
+    "About Us",
+    "Categories",
+    "Blogs",
+    "Bulk Enquiry",
+    "We Find For You",
+    "Contact Us",
+  ];
+
+  const getLinkClass = (path) => {
+    // Add yellow text if the link is active
+    return location.pathname === `/${path.replace(/\s+/g, "").toLowerCase()}`
+      ? "text-yellow-400"
+      : "text-black hover:text-yellow-400 transition duration-200";
+  };
 
   return (
     <header className="bg-white shadow-md p-4 sticky">
@@ -15,11 +33,11 @@ const Navbar = () => {
 
         {/* Desktop Navigation Links */}
         <nav className="hidden md:flex space-x-6 text-black font-semibold text-sm">
-          {["Home", "About Us", "Categories", "Blogs", "Bulk Enquiry", "We Find For You", "Contact Us"].map((link) => (
+          {links.map((link) => (
             <Link
               key={link}
-              to={`/${link.replace(/\s+/g, '').toLowerCase()}`} // Replace space with no space and convert to lowercase
-              className="hover:text-yellow-400 transition duration-200"
+              to={`/${link.replace(/\s+/g, "").toLowerCase()}`} // Replace space with no space and convert to lowercase
+              className={getLinkClass(link)} // Apply dynamic class for active link
             >
               {link}
             </Link>
@@ -47,9 +65,9 @@ const Navbar = () => {
 
         {/* Sign In Button */}
         <button className="bg-yellow-400 text-black px-4 py-2 rounded hover:bg-yellow-500 text-xs sm:text-sm">
-        <Link to="/signin" className="text-black no-underline">
-          Sign In
-        </Link>
+          <Link to="/signin" className="text-black no-underline">
+            Sign In
+          </Link>
         </button>
 
         {/* Mobile Menu Button (only visible on mobile) */}
@@ -66,11 +84,12 @@ const Navbar = () => {
       {/* Mobile Navigation Menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-white shadow-md mt-4 p-4 space-y-4">
-          {["Home", "About Us", "Categories", "Blogs", "Bulk Enquiry", "We Find For You", "Contact Us"].map((link) => (
+          {links.map((link) => (
             <Link
               key={link}
-              to={`/${link.replace(/\s+/g, '').toLowerCase()}`} // Replace space with no space and convert to lowercase
-              className="block text-black text-lg font-semibold hover:text-yellow-400"
+              to={`/${link.replace(/\s+/g, "").toLowerCase()}`} // Replace space with no space and convert to lowercase
+              className={`block text-lg font-semibold ${getLinkClass(link)}`} // Apply dynamic class for active link
+              onClick={() => setIsMenuOpen(false)} // Close menu on link click
             >
               {link}
             </Link>

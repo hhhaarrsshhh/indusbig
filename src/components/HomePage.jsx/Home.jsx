@@ -4,6 +4,7 @@ import Category from "./Category";
 import FeaturesSection from "./FeaturesSection";
 import HeroSection from "./HeroSection";
 import InfoBar from "./InfoBar";
+import MarinEngine from "./MarinEngine";
 import TopBrands from "./TopBrands";
 import WeFindForYou from "./WeFindForYou";
 
@@ -14,6 +15,7 @@ const HomePage = () => {
       <InfoBar />
       <Category/>
       <BestSeller/>
+      <MarinEngine/>
       <FeaturesSection/>
       <TopBrands/>
       <WeFindForYou/>

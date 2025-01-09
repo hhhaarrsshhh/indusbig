@@ -8,6 +8,7 @@ import Home from "../components/HomePage.jsx/Home";
 import PrivacyPolicy from "../components/PrivacyPolicy/PrivacyPolicy";
 import ReturnPolicy from "../components/ReturnPolicy/ReturnPolicy";
 import SignUp from "../components/Signup/SignUp";
+import TermsAndConditions from "../components/TermsAndConditions/TermsAndConditions";
 
 
 
@@ -22,6 +23,7 @@ export const routes = [
   {path:"/contactus",element:<ContactUs/>},
   {path:"/aboutus",element:<AboutUs/>},
   { path: "/signin", element: <SignUp /> },
+  { path: "/termsandconditions", element: <TermsAndConditions /> },
 
 
   
