@@ -10,10 +10,10 @@ const Footer = () => {
     <footer className="bg-customGray text-white">
       {/* Top Section */}
       <div
-        className="text-center py-2 sm:py-4 md:py-6 px-4"
+        className="text-center py-2 sm:py-4 md:py-6 px-4 max-sm:mt-7 "
         style={{ backgroundColor: "rgba(255, 198, 51, 1)" }}
       >
-        <h3 className="font-bold text-lg sm:text-lg md:text-2xl">
+        <h3 className="font-bold text-lg max-sm:text-base md:text-2xl">
           STAY UPTO DATE ABOUT OUR LATEST OFFERS
         </h3>
       </div>

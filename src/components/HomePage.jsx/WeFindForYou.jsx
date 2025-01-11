@@ -5,7 +5,7 @@ const WeFindForYou = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Text Section */}
         <div>
-          <h2 className="text-yellow-400 text-4xl font-semibold mb-4">
+          <h2 className="text-yellow-400 text-4xl font-semibold mb-4 max-sm:mt-8">
             WE FIND FOR YOU
           </h2>
           <p className="text-gray-300 text-lg mb-6">
@@ -23,9 +23,9 @@ const WeFindForYou = () => {
           <img
             src={wefind}
             alt="Marine Diesel Engine"
-            className="ml-8"          />
+            className="ml-8  max-sm:ml-0 max-sm:w-full "          />
           <div className="absolute bottom-4 left-4  bg-opacity-75 p-4 rounded-lg">
-            <p className="text-white text-3xl ml-7 font-medium">
+            <p className="text-white text-3xl max-sm:text-lg ml-7 max-sm:ml-0 font-medium">
               ONLINE HUB FOR MARINE DIESEL ENGINE SPARE PARTS
             </p>
           </div>
