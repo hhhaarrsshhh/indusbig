@@ -1,10 +1,19 @@
 import { Link } from "react-router-dom";
+import log1 from "../../assets/Badge.png";
+import log2 from "../../assets/Badge (1).png";
+import log3 from "../../assets/Badge (2).png";
+import log4 from "../../assets/Badge (3).png";
+import log5 from "../../assets/Badge (4).png";
+
 const Footer = () => {
   return (
     <footer className="bg-customGray text-white">
       {/* Top Section */}
-      <div className=" text-center py-4" style={{ backgroundColor: 'rgba(255, 198, 51, 1)' }} >
-        <h3 className="font-bold text-lg">
+      <div
+        className="text-center py-2 sm:py-4 md:py-6 px-4"
+        style={{ backgroundColor: "rgba(255, 198, 51, 1)" }}
+      >
+        <h3 className="font-bold text-lg sm:text-lg md:text-2xl">
           STAY UPTO DATE ABOUT OUR LATEST OFFERS
         </h3>
       </div>
@@ -68,24 +77,27 @@ const Footer = () => {
           <h4 className="font-bold text-lg mb-4">FAQ</h4>
           <ul className="space-y-2">
             <li>
-            <Link to="/privacypolicy" className="text-sm hover:underline">
+              <Link to="/privacypolicy" className="text-sm hover:underline">
                 Privacy Policy
-            </Link>
+              </Link>
             </li>
             <li>
-            <Link to="/returnpolicy" className="text-sm hover:underline">
+              <Link to="/returnpolicy" className="text-sm hover:underline">
                 Return Policy
-            </Link>
+              </Link>
             </li>
             <li>
-            <Link to="/termsandconditions" className="text-sm hover:underline">
+              <Link
+                to="/termsandconditions"
+                className="text-sm hover:underline"
+              >
                 Terms and Conditions
-            </Link>
+              </Link>
             </li>
             <li>
-            <Link to="/faq" className="text-sm hover:underline">
+              <Link to="/faq" className="text-sm hover:underline">
                 FAQs
-            </Link>
+              </Link>
             </li>
           </ul>
         </div>
@@ -121,10 +133,11 @@ const Footer = () => {
       {/* Payment Methods */}
       <div className="bg-gray-800 py-4 text-center">
         <div className="flex justify-center space-x-4">
-          <img src="/images/visa.png" alt="Visa" className="h-6" />
-          <img src="/images/paypal.png" alt="PayPal" className="h-6" />
-          <img src="/images/mastercard.png" alt="MasterCard" className="h-6" />
-          <img src="/images/gpay.png" alt="Google Pay" className="h-6" />
+          <img src={log1} alt="Visa" className="h-14" />
+          <img src={log2} alt="MasterCard" className="h-14" />
+          <img src={log3} alt="PayPal" className="h-14" />
+          <img src={log4} alt="applePay" className="h-14" />
+          <img src={log5} alt="GooglePay" className="h-14" />
         </div>
       </div>
     </footer>

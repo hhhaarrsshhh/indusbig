@@ -1,7 +1,8 @@
-import React from "react";
 import ship2 from "../../assets/ship2.png"; // Importing the image
+import { Link } from "react-router-dom";
 
 const MarinEngine = () => {
+
   return (
     <div
       className="relative bg-cover bg-center h-screen"
@@ -19,7 +20,9 @@ const MarinEngine = () => {
           Comprehensive inventory of marine engine spare parts, ensuring seamless maintenance and operation for maritime vessels.
         </p>
         <button className="mt-6 px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-black font-semibold rounded-lg flex items-center space-x-2">
-          <span>View Category</span>
+          <span> <Link to="/categories" className="text-sm hover:underline">
+          View Category
+            </Link></span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5"

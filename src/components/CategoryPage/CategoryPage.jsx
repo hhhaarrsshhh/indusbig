@@ -1,7 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import gen from "../../assets/gen.png";
 
 const CategoryPage = () => {
+  useEffect(() => {
+    scrollTo(0, 0);
+  });
+
   // Product data
   const products = [
     {
@@ -56,9 +60,9 @@ const CategoryPage = () => {
   ];
 
   return (
-    <div className="flex">
+    <div className="flex flex-col md:flex-row">
       {/* Sidebar */}
-      <div className="w-1/4 bg-gray-100 p-4 border-r sticky top-0 h-screen">
+      <div className="md:w-1/4 bg-gray-100 p-4 border-b md:border-b-0 md:border-r sticky top-0 md:h-screen">
         <h2 className="text-xl font-bold text-customGray mb-4">Filter</h2>
         <input
           type="text"
@@ -88,7 +92,7 @@ const CategoryPage = () => {
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 p-6">
+      <div className="flex-1 p-4 md:p-6">
         <h1 className="text-2xl font-bold mb-6">Product Catalog</h1>
 
         {/* Product Grid */}

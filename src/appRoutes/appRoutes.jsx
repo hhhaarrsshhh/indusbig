@@ -2,7 +2,7 @@ import AboutUs from "../components/AboutUs/AboutUs";
 import Blogs from "../components/Blogs/Blogs";
 import BulkEnquiry from "../components/BulkEnquiry/BulkEnquiry";
 import CategoryPage from "../components/CategoryPage/CategoryPage";
-import ContactUs from "../components/ContatcUs/ContactUs";
+import ContactUs from "../components/ContactUs/ContactUs";
 import Faq from "../components/Faq/Faq";
 import Home from "../components/HomePage.jsx/Home";
 import PrivacyPolicy from "../components/PrivacyPolicy/PrivacyPolicy";
